@@ -1,7 +1,8 @@
 name: Create and publish a Docker image
 
 on:
-  workflow_call:
+  push:
+  pull_request:
 
 env:
   REGISTRY: ghcr.io
@@ -32,7 +33,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@9ec57ed1fcdbf14dcef7dfbe97b2010124a938b7
         with:
-          images: ${{ env.REGISTRY }}/ ${{ github.actor }}
+          images: ${{ env.REGISTRY }}/${{ github.actor }}/${{ github.repository }}
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
