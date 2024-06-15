@@ -1,4 +1,4 @@
-FROM node:20.5.1-alpine AS base
+FROM node:22.3.0-alpine AS base
 
 # 1. Install dependencies only when needed
 FROM base AS deps
