@@ -1,5 +1,5 @@
-import bg from "../images/loginPage.jpg"
-import discordIcon from "../images/discordIcon.png"
+import bg from "../../images/loginPage.jpg"
+import discordIcon from "../../images/discordIcon.png"
 
 
 export default function LoginPage() {
