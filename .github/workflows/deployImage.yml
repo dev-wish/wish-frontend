@@ -30,7 +30,6 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Extract metadata (tags, labels) for Docker
-        if: github.ref == 'refs/heads/main'
         id: meta
         uses: docker/metadata-action@v5
         with:
@@ -38,17 +37,6 @@ jobs:
           tags: |
             type=ref,event=branch
             type=ref,event=tag
-            type=raw,value=latest
-
-      - name: Extract metadata (tags, labels) for Docker
-        if: github.ref != 'refs/heads/main'
-        id: meta
-        uses: docker/metadata-action@v5
-        with:
-          images: ${{ env.REGISTRY }}/${{ github.repository }}
-          tags: |
-            type=ref,event=branch
-
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
