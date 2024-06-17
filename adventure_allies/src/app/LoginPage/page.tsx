@@ -18,7 +18,7 @@ export default function LoginPage() {
 					</div>
 				</div>
 				<div className="p-1 w-[27.5vh] h-[8vh] ">
-					<div className=" gap-[8%] shadow-xl p-4 items-center flex flex-row rounded-full bg-opacity-85 w-full h-full"
+					<div className=" gap-[8%] shadow-[0px_13px_5.6px_0px_rgba(0,0,0,0.40)] p-4 items-center flex flex-row rounded-full bg-opacity-85 w-full h-full"
 						style={{
 							background: "#5869EBD9"
 						}}>
@@ -27,10 +27,8 @@ export default function LoginPage() {
 								backgroundImage: `url(${discordIcon.src})`,
 							}}>
 						</div>
-						<div className="basis-3/4 text-white text-center font-medium text-base leading-tight tracking-wide">
-							<span className="font-chinese-font">透過</span>
-							<span className="font-english-font">Discord</span>
-							<span className="font-chinese-font">登入</span>
+						<div className="basis-3/4 text-white text-center font-medium text-base leading-tight tracking-wide not-italic tleading-[117.252%_] font-chinese-font">
+							<span>透過Discord登入</span>
 						</div>
 					</div>
 				</div>
